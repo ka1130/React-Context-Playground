@@ -5,7 +5,7 @@ const Context = React.createContext();
 export const ProfileConsumer = Context.Consumer;
 
 export class ProfileStore extends Component {
-  state = { name: 'Jenny Hello', status: 'silver' }
+  state = { name: 'Jenny Hess', status: 'silver' }
 
   updateProfile = profileData => this.setState({ ...profileData });
 
