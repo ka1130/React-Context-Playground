@@ -3,8 +3,7 @@ import { ColorConsumer } from 'contexts/ColorContext';
 import { EditionConsumer } from 'contexts/EditionContext';
 
 class Submit extends Component {
-  renderColorConsumer(data) {
-    // console.log(data);
+  renderColorConsumer() {
     return (
       <ColorConsumer>
         { value => (

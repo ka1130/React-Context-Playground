@@ -11,7 +11,6 @@ class AccountEdit extends Component {
     e.preventDefault();
     console.log(this.props);
     this.props.updateProfile({ ...this.state });
-    // this.props.toggleVisibility();
     this.setState({ name: '', status: '' });
   }
 
