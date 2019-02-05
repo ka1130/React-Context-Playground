@@ -7,7 +7,7 @@ export const ProfileConsumer = Context.Consumer;
 export class ProfileStore extends Component {
   state = { name: 'Jenny Hello', status: 'silver' }
 
-  updateProfile = profileData => console.log(profileData);
+  updateProfile = profileData => this.setState({ ...profileData });
 
   render() {
     console.log(this.props)
