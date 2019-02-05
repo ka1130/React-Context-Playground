@@ -4,7 +4,7 @@ const Field = props => {
   return (
     <div className="field">
       <label>{props.label}</label>
-      <input type-="text" />
+      <input type="text" onChange={props.handleChange} name={props.name} value={props.value}/>
     </div>
   );
 };

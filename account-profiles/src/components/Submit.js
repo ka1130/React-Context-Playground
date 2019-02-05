@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
+// import ProfileContext from 'contexts/ProfileContext';
 
-const Submit = () => {
-  return (
-    <div className="field">
-      <button type="submit" className="ui button">
-        Submit
-      </button>
-    </div>  
-  );
-};
+class Submit extends Component {
+  render() {
+    return (
+      <div className="field">
+        <button
+          type="submit"
+          className="ui button"
+          onClick={this.props.handleSubmit}
+        >
+          Submit
+        </button>
+      </div>  
+    );
+  }
+}
 
 export default Submit;
