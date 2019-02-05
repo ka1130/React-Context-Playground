@@ -12,31 +12,31 @@ class AccountCard extends Component {
       <ProfileConsumer>
         {({ name, status }) => (
           <div className="card">
-          <div className="content">
-            <img
-              className="right floated mini ui image"
-              src={require('img/jenny.jpg')}
-              alt="jenny"
-            />
-            <h6 className="header">{name}</h6>
-            <div className="meta">Joined: 1/1/19</div>
-            <div className="description">
-              Membership status: 
-              <b> {status}</b>
-            </div>        
-          </div>
-          <div className="extra content">
-            <div className="ui two buttons">
-              <button
-                className={`ui basic ${editInfo} button`}
-                onClick={toggleVisibility}
-              >
-                {btnText}
-              </button>
-              <ThemeSwitcher />
+            <div className="content">
+              <img
+                className="right floated mini ui image"
+                src={require('img/jenny.jpg')}
+                alt="jenny"
+              />
+              <h6 className="header">{name}</h6>
+              <div className="meta">Joined: 1/1/19</div>
+              <div className="description">
+                Membership status: 
+                <b> {status}</b>
+              </div>        
+            </div>
+            <div className="extra content">
+              <div className="ui two buttons">
+                <button
+                  className={`ui basic ${editInfo} button`}
+                  onClick={toggleVisibility}
+                >
+                  {btnText}
+                </button>
+                <ThemeSwitcher />
+              </div>
             </div>
           </div>
-        </div>
         )}
       </ProfileConsumer>  
     );  
