@@ -21,13 +21,13 @@
   justify-content: center;
 }
 
-#edit-card {
+.ui.cards.cards-wrapper #edit-card {
   opacity: 0;
-  display: none;
+  /* display: none; */
   transition: all 0.5s ease;
 }
 
-#edit-card.card-visible {
+.ui.cards.cards-wrapper.show-edit #edit-card {
   opacity: 1;
-  display: block;
+  /* display: block; */
 }

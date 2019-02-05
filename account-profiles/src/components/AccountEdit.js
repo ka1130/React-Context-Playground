@@ -19,11 +19,10 @@ class AccountEdit extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <EditionConsumer>
         { value => {
-          console.log(value);
+          // console.log(value);
           const toggledClass = value.isVisible ? 'card-visible' : '';
           return (
             <div className={`card edit-card ${toggledClass}`} id="edit-card">
