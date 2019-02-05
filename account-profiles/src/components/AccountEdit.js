@@ -46,9 +46,7 @@ class AccountEdit extends Component {
 
 const ConnectedAccountEdit = props => (
   <ProfileConsumer>
-    {({ name, status, updateProfile }) => (
-      <AccountEdit name={name} status={status} updateProfile={updateProfile} />
-    )}
+    {value => <AccountEdit {...value} />}
   </ProfileConsumer>
 )
 

@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Field = props => {
+const Field = ({ label, name, value, handleChange }) => {
   return (
     <div className="field">
-      <label>{props.label}</label>
-      <input type="text" onChange={props.handleChange} name={props.name} value={props.value}/>
+      <label>{label}</label>
+      <input type="text" onChange={handleChange} name={name} value={value}/>
     </div>
   );
 };
