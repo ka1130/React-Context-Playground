@@ -7,7 +7,6 @@ import ThemeSwitcher from 'components/ThemeSwitcher';
 
 class AccountCard extends Component {
   renderProfileConsumer = ({ editInfo }, { isVisible, toggleVisibility }) => {
-    console.log(isVisible);
     const editInfoTxt = isVisible ? 'Hide edition' : 'Edit info';
     return (
       <ProfileConsumer>

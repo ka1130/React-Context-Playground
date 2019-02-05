@@ -4,7 +4,7 @@ import { EditionConsumer } from 'contexts/EditionContext';
 
 class Submit extends Component {
   renderColorConsumer(data) {
-    console.log(data);
+    // console.log(data);
     return (
       <ColorConsumer>
         { value => (
@@ -26,7 +26,6 @@ class Submit extends Component {
       <EditionConsumer>
         { value => this.renderColorConsumer(value) }
       </EditionConsumer>
-
     );
   }
 }
