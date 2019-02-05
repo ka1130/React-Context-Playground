@@ -17,5 +17,3 @@ export class ProfileStore extends Component {
     );
   };
 }
-
-export default ProfileContext;

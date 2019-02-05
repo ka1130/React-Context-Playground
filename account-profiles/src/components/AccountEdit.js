@@ -45,9 +45,9 @@ class AccountEdit extends Component {
   }
 }
 
-const ConnectedAccountEdit = props => (
+const ConnectedAccountEdit = () => (
   <ProfileConsumer>
-    {value => <AccountEdit {...value} />}
+    { value => <AccountEdit { ...value } />} 
   </ProfileConsumer>
 )
 

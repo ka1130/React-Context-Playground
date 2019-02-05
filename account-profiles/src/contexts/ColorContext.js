@@ -1,25 +1,28 @@
 import React, { Component } from 'react';
 
-const defaultTheme = { menu: '', themeSwitcher: 'teal', editInfo: 'grey', submit: ''}
-
-const ColorContext = React.createContext(defaultTheme);
+const ColorContext = React.createContext();
 
 export const ColorConsumer = ColorContext.Consumer;
 
 export class ColorStore extends Component {
-  state = { menu: '', themeSwitcher: 'teal', editInfo: 'grey', submit: ''}
+  state = { menu: '', themeSwitcher: 'teal', editInfo: 'grey', submit: '' }
 
-  static contextType = ColorContext;
-
-  updateTheme = theme => console.log(theme, this.context);
+  switchTheme = () => {
+    // if (this.state === defaultTheme) {
+    //   this.setState({ ...altTheme });
+    // } else {
+    //   this.setState({ ...defaultTheme });
+    // }
+  };
 
   render() {
     return (
-      <ColorContext value={{ ...this.state, updateTheme: this.updateTheme }}>
+      <ColorContext.Provider value={{ ...this.state, switchTheme: this.switchTheme }}>
         {this.props.children}
-      </ColorContext>
+      </ColorContext.Provider>
     );
   }
 }
 
-export default ColorContext;
+// const defaultTheme = { menu: '', themeSwitcher: 'teal', editInfo: 'grey', submit: ''};
+// const altTheme = { menu: 'teal', themeSwitcher: 'orange', editInfo: 'olive', submit: 'purple'};

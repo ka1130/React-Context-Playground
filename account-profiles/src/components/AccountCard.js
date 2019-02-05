@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { ProfileConsumer } from 'contexts/ProfileContext';
 
+import ThemeSwitcher from 'components/ThemeSwitcher';
+
 class AccountCard extends Component {
   render() {
     return (
@@ -23,7 +25,7 @@ class AccountCard extends Component {
           <div className="extra content">
             <div className="ui two buttons">
               <button className="ui basic grey button">Edit info</button>
-              <button className="ui basic teal button">Change theme</button>
+              <ThemeSwitcher />
             </div>
           </div>
         </div>
