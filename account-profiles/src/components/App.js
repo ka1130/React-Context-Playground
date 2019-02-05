@@ -14,8 +14,8 @@ class App extends Component {
         <ColorStore>
           <ProfileStore>
             <EditionStore>
-            <Menu />
-            <CardsWrapper />
+              <Menu />
+              <CardsWrapper />
             </EditionStore>
           </ProfileStore>        
         </ColorStore>

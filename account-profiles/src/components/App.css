@@ -21,12 +21,10 @@
   justify-content: center;
   width: 610px;
   margin: 0 auto;
-  /* border: 1px solid grey; */
 }
 
 .ui.cards.cards-wrapper #edit-card {
   opacity: 0;
-  /* display: none; */
   transform: translateX(150px);
   transition: all 0.5s ease;
 }
@@ -34,7 +32,6 @@
 .ui.cards.cards-wrapper.show-edit #edit-card {
   opacity: 1;
   transform: translateX(0);
-  /* display: block; */
 }
 
 .ui.cards.cards-wrapper #account-card {

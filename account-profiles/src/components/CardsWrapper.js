@@ -19,7 +19,6 @@ class CardsWrapper extends Component {
           )
         } }
       </EditionConsumer>
-
     );
   };
 }
