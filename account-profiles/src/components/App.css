@@ -1,0 +1,33 @@
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.fade-leave {
+  opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#edit-card {
+  opacity: 0;
+  display: none;
+  transition: all 0.5s ease;
+}
+
+#edit-card.card-visible {
+  opacity: 1;
+  display: block;
+}

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-
 import { ProfileStore } from 'contexts/ProfileContext';
 import { ColorStore } from 'contexts/ColorContext';
 import AccountCard from 'components/AccountCard';
 import AccountEdit from 'components/AccountEdit';
 import Menu from 'components/Menu';
+
+import './App.css';
 
 class App extends Component {
   render() {
@@ -14,7 +15,7 @@ class App extends Component {
           <ProfileStore>
             <Menu />
             <div className="ui container app-container">
-              <div className="ui cards">
+              <div className="ui cards cards-wrapper">
                 <AccountCard />
                 <AccountEdit />
               </div>

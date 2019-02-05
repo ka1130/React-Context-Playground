@@ -19,7 +19,7 @@ class AccountEdit extends Component {
 
   render() {
     return (
-      <div className="card">
+      <div className="card edit-card" id="edit-card">
         <div className="content">
           <h5 className="header">Edit Account Profile</h5>
           <div className="description">

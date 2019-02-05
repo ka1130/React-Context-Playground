@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { ProfileConsumer } from 'contexts/ProfileContext';
+import { ColorConsumer } from 'contexts/ColorContext';
 
 import ThemeSwitcher from 'components/ThemeSwitcher';
 
 class AccountCard extends Component {
-  render() {
+  renderProfileConsumer = ({ editInfo }) => {
+    console.log(editInfo);
     return (
       <ProfileConsumer>
         {({ name, status }) => (
@@ -24,14 +26,26 @@ class AccountCard extends Component {
           </div>
           <div className="extra content">
             <div className="ui two buttons">
-              <button className="ui basic grey button">Edit info</button>
+              <button
+                className={`ui basic ${editInfo} button`}
+                onClick={() => {}
+              }>
+                Edit info
+              </button>
               <ThemeSwitcher />
             </div>
           </div>
         </div>
         )}
-      </ProfileConsumer>
+      </ProfileConsumer>    
+    )
+  }
 
+  render() {
+    return (
+      <ColorConsumer>
+        { value => this.renderProfileConsumer(value) }
+      </ColorConsumer>
     );
   }
 }
