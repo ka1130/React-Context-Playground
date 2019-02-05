@@ -9,7 +9,6 @@ class AccountEdit extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    console.log(this.props);
     this.props.updateProfile({ ...this.state });
     this.setState({ name: '', status: '' });
   }

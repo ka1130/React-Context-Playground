@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { ColorConsumer } from 'contexts/ColorContext';
 
 class ThemeSwitcher extends Component {
-  state = { themeSwitcher: this.props.themeSwitcher} 
-
   render() {
     return (
       <button
