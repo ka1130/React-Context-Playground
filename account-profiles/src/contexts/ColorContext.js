@@ -4,7 +4,7 @@ import { isEqual } from 'lodash';
 const ColorContext = React.createContext();
 
 const defaultTheme = { menu: '', themeSwitcher: 'teal', editInfo: 'grey', submit: ''};
-const altTheme = { menu: 'teal', themeSwitcher: 'orange', editInfo: 'olive', submit: 'purple'};
+const altTheme = { menu: 'orange', themeSwitcher: 'orange', editInfo: 'olive', submit: 'teal'};
 
 export class ColorStore extends Component {
   state = defaultTheme;

@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
-// import ProfileContext from 'contexts/ProfileContext';
+import { ColorConsumer } from 'contexts/ColorContext';
 
 class Submit extends Component {
   render() {
     return (
-      <div className="field">
-        <button
-          type="submit"
-          className="ui button"
-          onClick={this.props.handleSubmit}
-        >
-          Submit
-        </button>
-      </div>  
+      <ColorConsumer>
+        { value => (
+          <div className="field">
+            <button
+              type="submit"
+              className={`ui button ${value.submit}`}
+              onClick={this.props.handleSubmit}
+            >
+              Submit
+            </button>
+          </div>  
+        ) }
+      </ColorConsumer>
+
     );
   }
 }
