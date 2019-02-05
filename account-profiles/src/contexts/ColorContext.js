@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { isEqual } from 'lodash';
 
 const ColorContext = React.createContext();
 
@@ -8,14 +9,7 @@ const altTheme = { menu: 'teal', themeSwitcher: 'orange', editInfo: 'olive', sub
 export class ColorStore extends Component {
   state = defaultTheme;
 
-  switchTheme = () => {
-    if (this.state === defaultTheme) {
-      this.setState(altTheme);
-    } else {
-      this.setState(defaultTheme);
-    }
-    console.log(this.state);
-  };
+  switchTheme = () => (isEqual(this.state, defaultTheme)) ? this.setState(altTheme) : this.setState(defaultTheme);
 
   render() {
     return (
