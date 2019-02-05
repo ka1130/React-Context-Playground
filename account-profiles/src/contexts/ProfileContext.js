@@ -10,7 +10,6 @@ export class ProfileStore extends Component {
   updateProfile = profileData => this.setState({ ...profileData });
 
   render() {
-    console.log(this.props)
     return (
       <Context.Provider value={{ ...this.state, updateProfile: this.updateProfile }}>
         {this.props.children}

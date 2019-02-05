@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import ProfileContext from 'contexts/ProfileContext';
 import { ProfileConsumer } from 'contexts/ProfileContext';
 
 class AccountCard extends Component {
-  static contextType = ProfileContext;
-
   render() {
-    console.log(this.context);
     return (
       <ProfileConsumer>
         {({ name, status }) => (

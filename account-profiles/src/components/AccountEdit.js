@@ -10,6 +10,7 @@ class AccountEdit extends Component {
   handleSubmit = e => {
     e.preventDefault();
     this.props.updateProfile({ ...this.state });
+    this.setState({ name: '', status: '' });
   }
 
   handleChange({ target: { value, name } }) {
