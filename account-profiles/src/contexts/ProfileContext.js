@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-const Context = React.createContext();
+const ProfileContext = React.createContext();
 
-export const ProfileConsumer = Context.Consumer;
+export const ProfileConsumer = ProfileContext.Consumer;
 
 export class ProfileStore extends Component {
   state = { name: 'Jenny Hess', status: 'silver' }
@@ -11,12 +11,11 @@ export class ProfileStore extends Component {
 
   render() {
     return (
-      <Context.Provider value={{ ...this.state, updateProfile: this.updateProfile }}>
+      <ProfileContext.Provider value={{ ...this.state, updateProfile: this.updateProfile }}>
         {this.props.children}
-      </Context.Provider>
+      </ProfileContext.Provider>
     );
   };
 }
 
-export default Context;
-
+export default ProfileContext;
