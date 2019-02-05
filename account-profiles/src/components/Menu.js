@@ -1,14 +1,18 @@
 import React from 'react';
+import { ProfileConsumer } from 'contexts/ProfileContext';
 
-const Menu = props => {
-  return (
-    <div className="ui secondary pointing menu">
-      <a className="active item" href="/">Jenny Hess</a>
-      <div className="right menu">
-        <a className="item" href="/">Logout</a>
+const Menu = () => (
+  <ProfileConsumer>
+    { ({ name }) => (
+      <div className="ui secondary pointing menu">
+        <a className="active item" href="/">{name}</a>
+        <div className="right menu">
+          <a className="item" href="/">Logout</a>
+        </div>
       </div>
-    </div>
-  );
-};
+    ) }
+
+  </ProfileConsumer>
+);
 
 export default Menu;
