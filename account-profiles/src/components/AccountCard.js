@@ -11,7 +11,7 @@ class AccountCard extends Component {
     return (
       <ProfileConsumer>
         {({ name, status }) => (
-          <div className="card">
+          <div className="card" id="account-card">
             <div className="content">
               <img
                 className="right floated mini ui image"

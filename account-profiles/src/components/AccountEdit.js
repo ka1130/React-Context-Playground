@@ -5,7 +5,7 @@ import Field from 'components/Field'
 import Submit from 'components/Submit'
 
 class AccountEdit extends Component {
-  state = { name: '', status: '', isVisible: false };
+  state = { name: '', status: '' };
 
   handleSubmit = e => {
     e.preventDefault();
