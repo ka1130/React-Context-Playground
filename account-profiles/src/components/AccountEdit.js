@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { ProfileConsumer } from 'contexts/ProfileContext';
+
 import Field from 'components/Field'
 import Submit from 'components/Submit'
 
@@ -7,12 +9,11 @@ class AccountEdit extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    console.log(this.state);
+    this.props.updateProfile({ ...this.state });
   }
 
   handleChange({ target: { value, name } }) {
     this.setState({ [name]: value });
-    console.log(this.state);
   }
 
   render() {
@@ -43,4 +44,12 @@ class AccountEdit extends Component {
   }
 }
 
-export default AccountEdit;
+const ConnectedAccountEdit = props => (
+  <ProfileConsumer>
+    {({ name, status, updateProfile }) => (
+      <AccountEdit name={name} status={status} updateProfile={updateProfile} />
+    )}
+  </ProfileConsumer>
+)
+
+export default ConnectedAccountEdit;
