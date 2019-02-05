@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { ProfileStore } from 'contexts/ProfileContext';
 import { ColorStore } from 'contexts/ColorContext';
+import { EditionStore } from 'contexts/EditionContext';
 import AccountCard from 'components/AccountCard';
 import AccountEdit from 'components/AccountEdit';
 import Menu from 'components/Menu';
@@ -16,8 +17,10 @@ class App extends Component {
             <Menu />
             <div className="ui container app-container">
               <div className="ui cards cards-wrapper">
-                <AccountCard />
-                <AccountEdit />
+                <EditionStore>
+                  <AccountCard />
+                  <AccountEdit />
+                </EditionStore>
               </div>
             </div>
           </ProfileStore>        
