@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { ColorConsumer } from 'contexts/ColorContext';
+import { EditionConsumer } from 'contexts/EditionContext';
 
 class Submit extends Component {
-  render() {
+  renderColorConsumer(data) {
+    console.log(data);
     return (
       <ColorConsumer>
         { value => (
@@ -17,6 +19,13 @@ class Submit extends Component {
           </div>  
         ) }
       </ColorConsumer>
+    )
+  }
+  render() {
+    return (
+      <EditionConsumer>
+        { value => this.renderColorConsumer(value) }
+      </EditionConsumer>
 
     );
   }
