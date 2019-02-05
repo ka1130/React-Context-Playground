@@ -5,7 +5,7 @@ import AccountEdit from 'components/AccountEdit';
 class App extends Component {
   render() {
     return (
-      <div className="app-container">
+      <div className="main ui container app-container">
         <div className="ui cards">
           <AccountCard />
           <AccountEdit />
