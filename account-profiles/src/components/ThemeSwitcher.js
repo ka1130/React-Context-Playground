@@ -4,15 +4,11 @@ import { ColorConsumer } from 'contexts/ColorContext';
 class ThemeSwitcher extends Component {
   state = { themeSwitcher: this.props.themeSwitcher} 
 
-  switchTheme() {
-    console.log(this.props);
-  }
-
   render() {
     return (
       <button
         className={`ui basic button ${this.props.themeSwitcher}`}
-        onClick={() => this.switchTheme()} //this.props.switchTeme  - define it in the store
+        onClick={this.props.switchTheme}
       >
         Switch theme
       </button>

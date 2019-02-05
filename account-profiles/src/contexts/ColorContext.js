@@ -2,17 +2,19 @@ import React, { Component } from 'react';
 
 const ColorContext = React.createContext();
 
-export const ColorConsumer = ColorContext.Consumer;
+const defaultTheme = { menu: '', themeSwitcher: 'teal', editInfo: 'grey', submit: ''};
+const altTheme = { menu: 'teal', themeSwitcher: 'orange', editInfo: 'olive', submit: 'purple'};
 
 export class ColorStore extends Component {
-  state = { menu: '', themeSwitcher: 'teal', editInfo: 'grey', submit: '' }
+  state = defaultTheme;
 
   switchTheme = () => {
-    // if (this.state === defaultTheme) {
-    //   this.setState({ ...altTheme });
-    // } else {
-    //   this.setState({ ...defaultTheme });
-    // }
+    if (this.state === defaultTheme) {
+      this.setState(altTheme);
+    } else {
+      this.setState(defaultTheme);
+    }
+    console.log(this.state);
   };
 
   render() {
@@ -24,5 +26,4 @@ export class ColorStore extends Component {
   }
 }
 
-// const defaultTheme = { menu: '', themeSwitcher: 'teal', editInfo: 'grey', submit: ''};
-// const altTheme = { menu: 'teal', themeSwitcher: 'orange', editInfo: 'olive', submit: 'purple'};
+export const ColorConsumer = ColorContext.Consumer;
