@@ -23,7 +23,7 @@
 
 #edit-card {
   opacity: 0;
-  display: none;
+  /* display: none; */
   transition: all 0.5s ease;
 }
 

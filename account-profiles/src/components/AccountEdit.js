@@ -6,7 +6,7 @@ import Field from 'components/Field'
 import Submit from 'components/Submit'
 
 class AccountEdit extends Component {
-  state = { name: '', status: '', isVisible: false };
+  state = { name: '', status: '' };
 
   handleSubmit = e => {
     e.preventDefault();
@@ -19,12 +19,10 @@ class AccountEdit extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <EditionConsumer>
-        { value => {
-          console.log(value);
-          const toggledClass = value.isVisible ? 'card-visible' : '';
+        { ({ isVisible }) => {
+          const toggledClass = isVisible ? 'card-visible' : '';
           return (
             <div className={`card edit-card ${toggledClass}`} id="edit-card">
               <div className="content">
